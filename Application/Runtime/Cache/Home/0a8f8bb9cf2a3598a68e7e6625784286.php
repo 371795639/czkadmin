@@ -9,6 +9,7 @@
     <!--<script src="//cdn.bootcss.com/uikit/2.25.0/js/uikit.js"></script>-->
     <link rel="stylesheet" href="/czkadmin/Public/uikit-2.25.0/css/uikit.min.css" />
     <link rel="stylesheet" href="/czkadmin/Public/css/jquery.json-viewer.css" />
+    <link rel="stylesheet" href="/czkadmin/Public/css/loading.css" />
     <script src="/czkadmin/Public/uikit-2.25.0/js/uikit.js"></script>
     <script src="/czkadmin/Public/jquery/jquery-3.1.1.min.js"></script>
     <script src="/czkadmin/Public/jquery/jquery.json-viewer.js"></script>
@@ -129,6 +130,9 @@
 
 </div>
 
+<!--loading动画!-->
+<div id="loading" class="loading" style="display:none">Loading pages...</div>
+
 </body>
 </html>
 
@@ -138,6 +142,7 @@
     function  generalPic() {
         var pic = $('#general_pic')[0].files[0];
         var fd = new FormData();
+        $('#loading').show();
         fd.append('general_pic', pic);
         $.ajax({
             url:"<?php echo U('Imageprocess/generalDetectApi');?>",
@@ -148,6 +153,7 @@
             contentType: false,
             processData: false,
             success:function(data){
+                $('#loading').hide();
 
                 try {
                     var input = eval('(' + data + ')');
@@ -168,6 +174,7 @@
     function  plantPic() {
     var pic = $('#plant_pic')[0].files[0];
     var fd = new FormData();
+    $('#loading').show();
     fd.append('plant_pic', pic);
     $.ajax({
         url:"<?php echo U('Imageprocess/plantDetectApi');?>",
@@ -178,6 +185,7 @@
         contentType: false,
         processData: false,
         success:function(data){
+            $('#loading').hide();
 
             try {
                 var input = eval('(' + data + ')');
@@ -198,6 +206,7 @@
     function  animalPic() {
         var pic = $('#animal_pic')[0].files[0];
         var fd = new FormData();
+        $('#loading').show();
         fd.append('animal_pic', pic);
         $.ajax({
             url:"<?php echo U('Imageprocess/animalDetectApi');?>",
@@ -208,6 +217,7 @@
             contentType: false,
             processData: false,
             success:function(data){
+                $('#loading').hide();
 
                 try {
                     var input = eval('(' + data + ')');
@@ -228,6 +238,7 @@
     function  dishPic() {
     var pic = $('#dish_pic')[0].files[0];
     var fd = new FormData();
+    $('#loading').show();
     fd.append('dish_pic', pic);
     $.ajax({
         url:"<?php echo U('Imageprocess/dishDetectApi');?>",
@@ -238,6 +249,7 @@
         contentType: false,
         processData: false,
         success:function(data){
+            $('#loading').hide();
 
             try {
                 var input = eval('(' + data + ')');
@@ -258,6 +270,7 @@
     function  carPic() {
         var pic = $('#car_pic')[0].files[0];
         var fd = new FormData();
+        $('#loading').show();
         fd.append('car_pic', pic);
         $.ajax({
             url:"<?php echo U('Imageprocess/carDetectApi');?>",
@@ -268,6 +281,7 @@
             contentType: false,
             processData: false,
             success:function(data){
+                $('#loading').hide();
 
                 try {
                     var input = eval('(' + data + ')');
