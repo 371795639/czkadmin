@@ -9,6 +9,7 @@
     <!--<script src="//cdn.bootcss.com/uikit/2.25.0/js/uikit.js"></script>-->
     <link rel="stylesheet" href="/czkadmin/Public/uikit-2.25.0/css/uikit.min.css" />
     <script src="/czkadmin/Public/uikit-2.25.0/js/uikit.js"></script>
+    <script src="/czkadmin/Public/jquery/jquery-3.1.1.min.js"></script>
 </head>
 
 
