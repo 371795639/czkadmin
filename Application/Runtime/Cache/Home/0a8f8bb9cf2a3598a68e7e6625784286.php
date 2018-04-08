@@ -36,13 +36,14 @@
                     <i class="uk-icon-cog uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">通用图像分析</h2></a>
+                    <h2 class="uk-h3">通用图像分析</h2>
                     <p>请上传任意图像</p>
-                    <input type="file" name="general_pic" id="general_pic" accept="image/gif/jpg" />
+                    <input type="file" name="general_pic" id="general_pic" accept="image/gif/jpg" onchange="generalPreview()"/>
+                    <img id="general_pic_show" name="general_pic_show" src="" style="width: 100px; height: 100px" />
                     <input type="button" name="uploadPicButton" value="上传" onclick="generalPic()" />
                     <div class="uk-grid" data-uk-grid-margin >
                         <div class="uk-width-medium-1-1">
-                            <pre id="generalPre"></pre>
+                            <pre id="generalPre"><p>返回结果</p></pre>
                         </div>
                     </div>
                 </div>
@@ -55,13 +56,14 @@
                     <i class="uk-icon-thumbs-o-up uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">植物识别</h2></a>
-                    <p>细粒度图像识别之植物识别</p>
-                    <input type="file" name="plant_pic" id="plant_pic" accept="image/gif/jpg" />
+                    <h2 class="uk-h3">植物识别</h2>
+                    <p>请上传植物图片</p>
+                    <input type="file" name="plant_pic" id="plant_pic" accept="image/gif/jpg" onchange="plantPreview()" />
+                    <img id="plant_pic_show" name="plant_pic_show" src="" style="width: 100px; height: 100px" />
                     <input type="button" name="uploadPicButton" value="上传" onclick="plantPic()" />
                     <div class="uk-grid" data-uk-grid-margin >
                         <div class="uk-width-medium-1-1">
-                            <pre id="plantPre"></pre>
+                            <pre id="plantPre"><p>返回结果</p></pre>
                         </div>
                     </div>
                 </div>
@@ -74,13 +76,14 @@
                     <i class="uk-icon-cloud-download uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">动物识别</h2></a>
-                    <p>细粒度图像识别之动物识别</p>
-                    <input type="file" name="animal_pic" id="animal_pic" accept="image/gif/jpg" />
+                    <h2 class="uk-h3">动物识别</h2>
+                    <p>请上传动物图片</p>
+                    <input type="file" name="animal_pic" id="animal_pic" accept="image/gif/jpg" onchange="animalPreview()"/>
+                    <img id="animal_pic_show" name="animal_pic_show" src="" style="width: 100px; height: 100px" />
                     <input type="button" name="uploadPicButton" value="上传" onclick="animalPic()" />
                     <div class="uk-grid" data-uk-grid-margin >
                         <div class="uk-width-medium-1-1">
-                            <pre id="animalPre"></pre>
+                            <pre id="animalPre"><p>返回结果</p></pre>
                         </div>
                     </div>
                 </div>
@@ -97,7 +100,8 @@
                 <div class="uk-width-5-6">
                     <h2 class="uk-h3">菜品识别</h2>
                     <p>请上传菜品图片</p>
-                    <input type="file" name="dish_pic" id="dish_pic" accept="image/gif/jpg" />
+                    <input type="file" name="dish_pic" id="dish_pic" accept="image/gif/jpg" onchange="dishPreview()" />
+                    <img id="dish_pic_show" name="dish_pic_show" src="" style="width: 100px; height: 100px" />
                     <input type="button" name="uploadPicButton" value="上传" onclick="dishPic()" />
                     <div class="uk-grid" data-uk-grid-margin >
                         <div class="uk-width-medium-1-1">
@@ -114,13 +118,14 @@
                     <i class="uk-icon-comments uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">车型识别</h2></a>
-                    <p>细粒度图像识别之车型识别</p>
-                    <input type="file" name="car_pic" id="car_pic" accept="image/gif/jpg" />
+                    <h2 class="uk-h3">车型识别</h2>
+                    <p>请上传车型图片</p>
+                    <input type="file" name="car_pic" id="car_pic" accept="image/gif/jpg"  onchange="carPreview()"/>
+                    <img id="car_pic_show" name="car_pic_show" src="" style="width: 100px; height: 100px" />
                     <input type="button" name="uploadPicButton" value="上传"  onclick="carPic()" />
                     <div class="uk-grid" data-uk-grid-margin >
                         <div class="uk-width-medium-1-1">
-                            <pre id="carPre"></pre>
+                            <pre id="carPre"><p>返回结果</p></pre>
                         </div>
                     </div>
                 </div>
@@ -298,6 +303,58 @@
         });
 
     }
+    // 显示通用图片
+    function generalPreview() {
+        var r= new FileReader();
+        f=document.getElementById('general_pic').files[0];
+
+        r.readAsDataURL(f);
+        r.onload=function (e) {
+            document.getElementById('general_pic_show').src=this.result;
+        };
+    }
+    // 显示植物图片
+    function plantPreview() {
+        var r= new FileReader();
+        f=document.getElementById('plant_pic').files[0];
+
+        r.readAsDataURL(f);
+        r.onload=function (e) {
+            document.getElementById('plant_pic_show').src=this.result;
+        };
+    }
+    // 显示动物图片
+    function animalPreview() {
+        var r= new FileReader();
+        f=document.getElementById('animal_pic').files[0];
+
+        r.readAsDataURL(f);
+        r.onload=function (e) {
+            document.getElementById('animal_pic_show').src=this.result;
+        };
+    }
+    // 显示菜品图片
+    function dishPreview() {
+        var r= new FileReader();
+        f=document.getElementById('dish_pic').files[0];
+
+        r.readAsDataURL(f);
+        r.onload=function (e) {
+            document.getElementById('dish_pic_show').src=this.result;
+        };
+    }
+    // 显示车型图片
+    function carPreview() {
+        var r= new FileReader();
+        f=document.getElementById('car_pic').files[0];
+
+        r.readAsDataURL(f);
+        r.onload=function (e) {
+            document.getElementById('car_pic_show').src=this.result;
+        };
+    }
+
+</script>
 
 
 </script>
