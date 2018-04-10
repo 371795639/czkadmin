@@ -19,6 +19,9 @@
             case 'faceDetect':    // 引入人脸识别类
                 $package['class']  = Vendor("baiduApi.AipFace");
                 break;
+            case 'imageCensor':    // 引入图像审核类
+                $package['class']  = Vendor("baiduApi.AipImageCensor");
+                break;
         }
         return $package;
     }
@@ -41,6 +44,9 @@
              break;
          case 'faceDetect':
              $client = new \AipFace($id,$key,$secret);
+             break;
+         case 'imageCensor':
+             $client = new \AipImageCensor($id,$key,$secret);
              break;
 
          default:$client='';
