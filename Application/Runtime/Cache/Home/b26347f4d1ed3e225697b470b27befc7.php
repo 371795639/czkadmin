@@ -8,7 +8,12 @@
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/uikit/2.25.0/css/uikit.css" />-->
     <!--<script src="//cdn.bootcss.com/uikit/2.25.0/js/uikit.js"></script>-->
     <link rel="stylesheet" href="/czkadmin/Public/uikit-2.25.0/css/uikit.min.css" />
+    <link rel="stylesheet" href="/czkadmin/Public/css/jquery.json-viewer.css" />
+    <link rel="stylesheet" href="/czkadmin/Public/css/loading.css" />
     <script src="/czkadmin/Public/uikit-2.25.0/js/uikit.js"></script>
+    <script src="/czkadmin/Public/jquery/jquery-3.1.1.min.js"></script>
+    <script src="/czkadmin/Public/jquery/jquery.json-viewer.js"></script>
+
 </head>
 
 

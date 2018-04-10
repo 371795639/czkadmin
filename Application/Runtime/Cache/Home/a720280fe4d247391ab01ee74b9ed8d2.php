@@ -1,31 +1,32 @@
-<include file="Common/head" />
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>czkadmin</title>
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/uikit/2.25.0/css/uikit.css" />-->
+    <!--<script src="//cdn.bootcss.com/uikit/2.25.0/js/uikit.js"></script>-->
+    <link rel="stylesheet" href="/czkadmin/Public/uikit-2.25.0/css/uikit.min.css" />
+    <link rel="stylesheet" href="/czkadmin/Public/css/jquery.json-viewer.css" />
+    <link rel="stylesheet" href="/czkadmin/Public/css/loading.css" />
+    <script src="/czkadmin/Public/uikit-2.25.0/js/uikit.js"></script>
+    <script src="/czkadmin/Public/jquery/jquery-3.1.1.min.js"></script>
+    <script src="/czkadmin/Public/jquery/jquery.json-viewer.js"></script>
+
+</head>
+
+
 <body>
 <div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 
     <nav class="uk-navbar uk-margin-large-bottom">
-        <a class="uk-navbar-brand uk-hidden-small" href="layouts_frontpage.html">Brand</a>
-        <ul class="uk-navbar-nav uk-hidden-small">
-            <li class="uk-active">
-                <a href="layouts_frontpage.html">Frontpage</a>
-            </li>
-            <li>
-                <a href="layouts_portfolio.html">Portfolio</a>
-            </li>
-            <li>
-                <a href="layouts_blog.html">Blog</a>
-            </li>
-            <li>
-                <a href="layouts_documentation.html">Documentation</a>
-            </li>
-            <li>
-                <a href="layouts_contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="layouts_login.html">Login</a>
-            </li>
-        </ul>
-        <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
-        <div class="uk-navbar-brand uk-navbar-center uk-visible-small">Brand</div>
+        <a class="uk-navbar-brand uk-hidden-small" href="<?php echo U('Home/Index/index');?>">首页</a>
+        <!--<a class="uk-navbar-brand uk-hidden-small" href="http://ai.baidu.com/docs/#/ImageClassify-API/top" target="_blank">开发文档</a>-->
+        <!--<a class="uk-navbar-brand uk-hidden-small" href="#">返回首页</a>-->
+        <!--<a class="uk-navbar-brand uk-hidden-small" href="#">sample4</a>-->
+        <!--<a class="uk-navbar-brand uk-hidden-small" href="#">sample5</a>-->
+        <!--<a class="uk-navbar-brand uk-hidden-small" href="#">sample6</a>-->
     </nav>
 
 
@@ -33,11 +34,11 @@
         <div class="uk-width-medium-1-3">
             <div class="uk-grid">
                 <div class="uk-width-1-6">
-                    <i class="uk-icon-cog uk-icon-large uk-text-primary"></i>
+                    <i class="uk-icon-font uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">通用图像分析</h2></a>
-                    <p>通用图像分析</p>
+                    <a href="<?php echo U('Home/Ocrdetect/index');?>"><h2 class="uk-h3">文字识别</h2></a>
+                    <p>1.通用文字识别 2.网络图片文字识别 3.身份证识别 4.银行卡识别 5.驾驶证识别 6.行驶证识别 7.车牌识别 8.营业执照识别 9.通用票据识别</p>
                 </div>
             </div>
         </div>
@@ -45,11 +46,11 @@
         <div class="uk-width-medium-1-3">
             <div class="uk-grid">
                 <div class="uk-width-1-6">
-                    <i class="uk-icon-thumbs-o-up uk-icon-large uk-text-primary"></i>
+                    <i class="uk-icon-child uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">植物识别</h2></a>
-                    <p>细粒度图像识别之植物识别</p>
+                    <a href="<?php echo U('Home/Facedetect/index');?>"><h2 class="uk-h3">人脸识别</h2></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
@@ -57,11 +58,11 @@
         <div class="uk-width-medium-1-3">
             <div class="uk-grid">
                 <div class="uk-width-1-6">
-                    <i class="uk-icon-cloud-download uk-icon-large uk-text-primary"></i>
+                    <i class="uk-icon-hand-stop-o uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">动物识别</h2></a>
-                    <p>细粒度图像识别之动物识别</p>
+                    <h2 class="uk-h3">图像审核</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
@@ -71,11 +72,11 @@
         <div class="uk-width-medium-1-3">
             <div class="uk-grid">
                 <div class="uk-width-1-6">
-                    <i class="uk-icon-dashboard uk-icon-large uk-text-primary"></i>
+                    <i class="uk-icon-photo uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">菜品识别</h2></a>
-                    <p>细粒度图像识别之菜品识别</p>
+                    <a href="<?php echo U('Home/Imagedetect/index');?>"><h2 class="uk-h3">图像识别</h2></a>
+                    <p>1.通用图像 2.植物识别 3.动物识别<br>4.菜品识别 5.车型识别</p>
                 </div>
             </div>
         </div>
@@ -83,55 +84,15 @@
         <div class="uk-width-medium-1-3">
             <div class="uk-grid">
                 <div class="uk-width-1-6">
-                    <i class="uk-icon-comments uk-icon-large uk-text-primary"></i>
+                    <i class="uk-icon-search uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="#"><h2 class="uk-h3">车型识别</h2></a>
-                    <p>细粒度图像识别之车型识别</p>
+                    <h2 class="uk-h3">图像搜索</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--<div class="uk-grid" data-uk-grid-margin>-->
-    <!--<div class="uk-width-medium-1-3">-->
-    <!--<div class="uk-grid">-->
-    <!--<div class="uk-width-1-6">-->
-    <!--<i class="uk-icon-dashboard uk-icon-large uk-text-primary"></i>-->
-    <!--</div>-->
-    <!--<div class="uk-width-5-6">-->
-    <!--<h2 class="uk-h3">Sample Heading</h2>-->
-    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="uk-width-medium-1-3">-->
-    <!--<div class="uk-grid">-->
-    <!--<div class="uk-width-1-6">-->
-    <!--<i class="uk-icon-comments uk-icon-large uk-text-primary"></i>-->
-    <!--</div>-->
-    <!--<div class="uk-width-5-6">-->
-    <!--<h2 class="uk-h3">Sample Heading</h2>-->
-    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="uk-width-medium-1-3">-->
-    <!--<div class="uk-grid">-->
-    <!--<div class="uk-width-1-6">-->
-    <!--<i class="uk-icon-briefcase uk-icon-large uk-text-primary"></i>-->
-    <!--</div>-->
-    <!--<div class="uk-width-5-6">-->
-    <!--<h2 class="uk-h3">Sample Heading</h2>-->
-    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <h1 class="uk-text-center">Our Clients</h1>
 
     <div class="uk-grid" data-uk-grid-margin>
         <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
