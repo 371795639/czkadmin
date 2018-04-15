@@ -70,7 +70,7 @@
                     <i class="uk-icon-money uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <a href="<?php echo U('Home/Payment/index');?>"><h2 class="uk-h3">支付类demo</h2></a>
+                    <a href="<?php echo U('Home/Payment/index');?>"><h2 class="uk-h3">支付类</h2></a>
                     <p>整合一些类似支付宝,微信支付的接口</p>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                     <i class="uk-icon-envelope uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <h2 class="uk-h3">邮件类demo</h2>
+                    <h2 class="uk-h3">邮件类</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                     <i class="uk-icon-photo uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <h2 class="uk-h3">二维码类demo</h2>
+                    <h2 class="uk-h3">二维码类</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
@@ -132,7 +132,7 @@
                     <i class="uk-icon-hourglass-1 uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <h2 class="uk-h3">并发类demo</h2>
+                    <h2 class="uk-h3">并发类</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
@@ -158,7 +158,7 @@
                     <i class="uk-icon-microphone uk-icon-large uk-text-primary"></i>
                 </div>
                 <div class="uk-width-5-6">
-                    <h2 class="uk-h3">语音技术demo</h2>
+                    <h2 class="uk-h3">语音技术</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
